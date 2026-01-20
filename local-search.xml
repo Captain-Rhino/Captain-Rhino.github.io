@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>最近的一些安排以及技术路线考虑</title>
+    <link href="/2026/01/19/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E8%80%83%E8%99%91/"/>
+    <url>/2026/01/19/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E8%80%83%E8%99%91/</url>
+    
+    <content type="html"><![CDATA[<h5 id="周内安排"><a href="#周内安排" class="headerlink" title="周内安排"></a>周内安排</h5><p>上周仔细看了一遍师兄的实验设计，这周要把不懂的地方给学一下，主要包括ResNet，感受野，MLP，知识图谱，知识推理等等相关知识概念，最重要的是要能够<strong>复现</strong>一下他的实验。</p><h5 id="技术路线考虑"><a href="#技术路线考虑" class="headerlink" title="技术路线考虑"></a>技术路线考虑</h5><p><strong>cs50</strong>目前是跳着看的，毕竟不是0基础，后续会在博客上写一些内容。</p><p>上周在此之外还给企业导师发了简历，但是<strong>并没有得到任何回应</strong>，我看了下时间，我现在最想知道的是研二什么时候会回学校，如果恰好一年的话，那也就是9月份直面秋招了，即使是六七月份回学校，给的时间其实也是紧张的。</p><p>我不清楚公司的业务如何，如果有互联网企业的可能，考虑技术积累的话，那么技术积累期也只有这么几个月了，从现在到9月份？</p><p>目前我看好的是<strong>大模型应用开发，以及java后端的一套技术栈</strong>，这段时间先做大模型的RAG开发项目，再学一点java，正好教研室的任务不是很紧急，应该能学一些，到时候可以试着更新一些内容。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>闲思</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随想</tag>
+      
+      <tag>近期计划</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>基于RAG技术的群聊回答网站or机器人的构想</title>
     <link href="/2026/01/16/%E5%9F%BA%E4%BA%8ERAG%E6%8A%80%E6%9C%AF%E7%9A%84%E7%BE%A4%E8%81%8A%E5%9B%9E%E7%AD%94%E7%BD%91%E7%AB%99or%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E6%9E%84%E6%83%B3/"/>
     <url>/2026/01/16/%E5%9F%BA%E4%BA%8ERAG%E6%8A%80%E6%9C%AF%E7%9A%84%E7%BE%A4%E8%81%8A%E5%9B%9E%E7%AD%94%E7%BD%91%E7%AB%99or%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E6%9E%84%E6%83%B3/</url>
