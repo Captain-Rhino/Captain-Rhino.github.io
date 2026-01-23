@@ -19,12 +19,12 @@
   <meta name="author" content="Toss_3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这个计划将以周为单位，每一步都有明确的产出和目标。你的唯一任务就是不惜一切代价（All in），完成每周的目标。  Part 1: 技术路线 (Technology Stack)这是你的核武器库。我们选择的都是最轻量、最高效、最适合该场景的工具。    类别 技术选型 作用与原因    核心框架 LangChain 任务胶水。用于编排RAG的整个流程（加载、分割、嵌入、检索、生成），让你不用重复造">
+    <meta name="description" content="这个计划将以周为单位，每一步都有明确的产出和目标。你的唯一任务就是不惜一切代价（All in），完成每周的目标。  Part 1: 技术路线 (Technology Stack)这是你的核武器库。我们选择的都是最轻量、最高效、最适合该场景的工具。     类别 技术选型 作用与原因     核心框架 LangChain 任务胶水。用于编排RAG的整个流程（加载、分割、嵌入、检索、生成），让你不用重">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于RAG技术的群聊回答网站or机器人的构想">
 <meta property="og:url" content="http://example.com/2026/01/16/%E5%9F%BA%E4%BA%8ERAG%E6%8A%80%E6%9C%AF%E7%9A%84%E7%BE%A4%E8%81%8A%E5%9B%9E%E7%AD%94%E7%BD%91%E7%AB%99or%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E6%9E%84%E6%83%B3/index.html">
 <meta property="og:site_name" content="Toss_3&#39;s Official">
-<meta property="og:description" content="这个计划将以周为单位，每一步都有明确的产出和目标。你的唯一任务就是不惜一切代价（All in），完成每周的目标。  Part 1: 技术路线 (Technology Stack)这是你的核武器库。我们选择的都是最轻量、最高效、最适合该场景的工具。    类别 技术选型 作用与原因    核心框架 LangChain 任务胶水。用于编排RAG的整个流程（加载、分割、嵌入、检索、生成），让你不用重复造">
+<meta property="og:description" content="这个计划将以周为单位，每一步都有明确的产出和目标。你的唯一任务就是不惜一切代价（All in），完成每周的目标。  Part 1: 技术路线 (Technology Stack)这是你的核武器库。我们选择的都是最轻量、最高效、最适合该场景的工具。     类别 技术选型 作用与原因     核心框架 LangChain 任务胶水。用于编排RAG的整个流程（加载、分割、嵌入、检索、生成），让你不用重">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-01-16T07:44:10.000Z">
 <meta property="article:modified_time" content="2026-01-16T07:50:02.558Z">
@@ -280,50 +280,54 @@
                 <p>这个计划将以<strong>周</strong>为单位，每一步都有明确的产出和目标。你的唯一任务就是<strong>不惜一切代价（All in）</strong>，完成每周的目标。</p>
 <hr>
 <h3 id="Part-1-技术路线-Technology-Stack"><a href="#Part-1-技术路线-Technology-Stack" class="headerlink" title="Part 1: 技术路线 (Technology Stack)"></a>Part 1: 技术路线 (Technology Stack)</h3><p>这是你的核武器库。我们选择的都是最轻量、最高效、最适合该场景的工具。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">类别</th>
-<th align="left">技术选型</th>
-<th align="left">作用与原因</th>
+<th style="text-align:left">类别</th>
+<th style="text-align:left">技术选型</th>
+<th style="text-align:left">作用与原因</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left"><strong>核心框架</strong></td>
-<td align="left"><strong>LangChain</strong></td>
-<td align="left">任务胶水。用于编排RAG的整个流程（加载、分割、嵌入、检索、生成），让你不用重复造轮子。</td>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>核心框架</strong></td>
+<td style="text-align:left"><strong>LangChain</strong></td>
+<td style="text-align:left">任务胶水。用于编排RAG的整个流程（加载、分割、嵌入、检索、生成），让你不用重复造轮子。</td>
 </tr>
 <tr>
-<td align="left"><strong>API框架</strong></td>
-<td align="left"><strong>FastAPI</strong></td>
-<td align="left">你的AI大脑的“插座”。超高性能，极易上手，自带交互式API文档(Swagger UI)，比Django轻一百倍，是这个场景的最佳选择。</td>
+<td style="text-align:left"><strong>API框架</strong></td>
+<td style="text-align:left"><strong>FastAPI</strong></td>
+<td style="text-align:left">你的AI大脑的“插座”。超高性能，极易上手，自带交互式API文档(Swagger UI)，比Django轻一百倍，是这个场景的最佳选择。</td>
 </tr>
 <tr>
-<td align="left"><strong>QQ机器人</strong></td>
-<td align="left"><strong>NoneBot2 + go-cqhttp</strong></td>
-<td align="left">Python生态中最主流、最稳定的QQ机器人解决方案。</td>
+<td style="text-align:left"><strong>QQ机器人</strong></td>
+<td style="text-align:left"><strong>NoneBot2 + go-cqhttp</strong></td>
+<td style="text-align:left">Python生态中最主流、最稳定的QQ机器人解决方案。</td>
 </tr>
 <tr>
-<td align="left"><strong>向量数据库</strong></td>
-<td align="left"><strong>ChromaDB</strong></td>
-<td align="left">本地化、无需配置、内存&#x2F;文件模式运行。让你能瞬间把向量存储跑起来，专注于RAG逻辑本身。</td>
+<td style="text-align:left"><strong>向量数据库</strong></td>
+<td style="text-align:left"><strong>ChromaDB</strong></td>
+<td style="text-align:left">本地化、无需配置、内存/文件模式运行。让你能瞬间把向量存储跑起来，专注于RAG逻辑本身。</td>
 </tr>
 <tr>
-<td align="left"><strong>Embedding模型</strong></td>
-<td align="left"><strong>Sentence-Transformers</strong></td>
-<td align="left">开源、本地运行。不依赖任何API，速度快，效果好，完全免费，是原型开发和学习的不二之选。</td>
+<td style="text-align:left"><strong>Embedding模型</strong></td>
+<td style="text-align:left"><strong>Sentence-Transformers</strong></td>
+<td style="text-align:left">开源、本地运行。不依赖任何API，速度快，效果好，完全免费，是原型开发和学习的不二之选。</td>
 </tr>
 <tr>
-<td align="left"><strong>大语言模型(LLM)</strong></td>
-<td align="left"><strong>Kimi (Moonshot) &#x2F; DeepSeek API</strong></td>
-<td align="left">国内厂商提供，有免费额度，API兼容OpenAI格式，对中文支持极好，是学生开发者的福音。</td>
+<td style="text-align:left"><strong>大语言模型(LLM)</strong></td>
+<td style="text-align:left"><strong>Kimi (Moonshot) / DeepSeek API</strong></td>
+<td style="text-align:left">国内厂商提供，有免费额度，API兼容OpenAI格式，对中文支持极好，是学生开发者的福音。</td>
 </tr>
 <tr>
-<td align="left"><strong>HTTP客户端</strong></td>
-<td align="left"><strong>HTTPX</strong></td>
-<td align="left"><code>requests</code>的现代替代品，支持异步请求，与FastAPI完美配合。</td>
+<td style="text-align:left"><strong>HTTP客户端</strong></td>
+<td style="text-align:left"><strong>HTTPX</strong></td>
+<td style="text-align:left"><code>requests</code>的现代替代品，支持异步请求，与FastAPI完美配合。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <hr>
 <h3 id="Part-2-环境配置-Environment-Setup"><a href="#Part-2-环境配置-Environment-Setup" class="headerlink" title="Part 2: 环境配置 (Environment Setup)"></a>Part 2: 环境配置 (Environment Setup)</h3><p>环境配不好，一天就白费。严格按照以下步骤，一次性搞定。</p>
 <ol>
@@ -338,7 +342,6 @@
 </li>
 <li><p><strong>创建并激活Python虚拟环境 (至关重要！)</strong>:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Windows</span><br>python -m venv venv<br>.\venv\Scripts\activate<br><br><span class="hljs-comment"># macOS / Linux</span><br>python3 -m venv venv<br><span class="hljs-built_in">source</span> venv/bin/activate<br></code></pre></td></tr></table></figure>
-
 <p><em>看到命令行前面有 <code>(venv)</code> 字样，代表成功。</em></p>
 </li>
 <li><p><strong>安装所有Python依赖</strong>:</p>
@@ -346,7 +349,6 @@
 <li>一次性把所有需要的库装好。创建一个 <code>requirements.txt</code> 文件，写入以下内容：</li>
 </ul>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs txt"># requirements.txt<br><br># RAG Core<br>langchain<br>chromadb<br>sentence-transformers<br><br># LLM &amp; API<br>openai # Kimi和DeepSeek的SDK与OpenAI兼容<br>fastapi<br>uvicorn[standard] # 运行FastAPI的服务<br>httpx<br>python-dotenv<br><br># QQ Bot<br>nonebot2<br>nonebot-adapter-onebot<br></code></pre></td></tr></table></figure>
-
 <ul>
 <li>然后在命令行中执行安装：</li>
 </ul>
@@ -452,7 +454,7 @@
 <li><strong>Prompt调优</strong>: 根据实际使用情况，不断优化你的Prompt模板，让回答更精准。</li>
 <li><strong>整理GitHub仓库</strong>: 写一个清晰的<code>README.md</code>，描述你的项目、如何配置、如何运行。这是你未来求职的门面！</li>
 </ul>
-<p>这个计划强度极大，但每一步都踩在关键点上。**立刻开始，不要犹豫，严格执行。**遇到问题时，记住你的目标，利用好搜索引擎和官方文档。四周后，你将拥有一个能彻底改变你简历分量的杀手级项目。</p>
+<p>这个计划强度极大，但每一步都踩在关键点上。<strong>立刻开始，不要犹豫，严格执行。</strong>遇到问题时，记住你的目标，利用好搜索引擎和官方文档。四周后，你将拥有一个能彻底改变你简历分量的杀手级项目。</p>
 
                 
               </div>
@@ -613,6 +615,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -806,6 +814,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 

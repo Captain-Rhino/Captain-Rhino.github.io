@@ -19,12 +19,12 @@
   <meta name="author" content="Toss_3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="考虑到可能在教研室、宿舍、教室等不同的地方更新博客，就添加了一个github仓库来存储博客的文章内容，这样的话就能够通过这个仓库在不同的工作站上实现同步。思路大致如下： 由于本站使用hexo建站，实现逻辑是这样的 1本地Markdown文章 → Hexo生成静态HTML → 推送到GitHub Pages → 用户访问  hexo文档只要绑定到本站对应的page，那么理论在哪里都可以完成Hexo生">
+    <meta name="description" content="考虑到可能在教研室、宿舍、教室等不同的地方更新博客，就添加了一个github仓库来存储博客的文章内容，这样的话就能够通过这个仓库在不同的工作站上实现同步。思路大致如下： 由于本站使用hexo建站，实现逻辑是这样的 1本地Markdown文章 → Hexo生成静态HTML → 推送到GitHub Pages → 用户访问 hexo文档只要绑定到本站对应的page，那么理论在哪里都可以完成Hexo生">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过Github仓库异地同步、更新博客文章的方法">
 <meta property="og:url" content="http://example.com/2026/01/07/%E9%80%9A%E8%BF%87Github%E4%BB%93%E5%BA%93%E5%BC%82%E5%9C%B0%E5%90%8C%E6%AD%A5%E3%80%81%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Toss_3&#39;s Official">
-<meta property="og:description" content="考虑到可能在教研室、宿舍、教室等不同的地方更新博客，就添加了一个github仓库来存储博客的文章内容，这样的话就能够通过这个仓库在不同的工作站上实现同步。思路大致如下： 由于本站使用hexo建站，实现逻辑是这样的 1本地Markdown文章 → Hexo生成静态HTML → 推送到GitHub Pages → 用户访问  hexo文档只要绑定到本站对应的page，那么理论在哪里都可以完成Hexo生">
+<meta property="og:description" content="考虑到可能在教研室、宿舍、教室等不同的地方更新博客，就添加了一个github仓库来存储博客的文章内容，这样的话就能够通过这个仓库在不同的工作站上实现同步。思路大致如下： 由于本站使用hexo建站，实现逻辑是这样的 1本地Markdown文章 → Hexo生成静态HTML → 推送到GitHub Pages → 用户访问 hexo文档只要绑定到本站对应的page，那么理论在哪里都可以完成Hexo生">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-01-07T08:53:40.000Z">
 <meta property="article:modified_time" content="2026-01-07T09:24:44.000Z">
@@ -277,29 +277,21 @@
             
               <div class="markdown-body">
                 
-                <h4 id=""><a href="#" class="headerlink" title=""></a></h4><p>考虑到可能在教研室、宿舍、教室等不同的地方更新博客，就添加了一个github仓库来存储博客的文章内容，这样的话就能够通过这个仓库在不同的工作站上实现同步。思路大致如下：</p>
+                <h4 id=""><a href="#" class="headerlink" title=" "></a> </h4><p>考虑到可能在教研室、宿舍、教室等不同的地方更新博客，就添加了一个github仓库来存储博客的文章内容，这样的话就能够通过这个仓库在不同的工作站上实现同步。思路大致如下：</p>
 <p>由于本站使用hexo建站，实现逻辑是这样的</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">本地Markdown文章 → Hexo生成静态<span class="hljs-selector-tag">HTML</span> → 推送到GitHub Pages → 用户访问<br></code></pre></td></tr></table></figure>
-
 <p>hexo文档只要绑定到本站对应的page，那么理论在哪里都可以完成Hexo生成静态HTML之后的部分。</p>
 <p>所以想要异地完成的话，其实很简单，只需要同步文件就可以了，这里我通过创建一个github仓库，先通过pull把他们都下载到本地，然后当我更新的时候，把新的markdown文章在push到这个仓库里。</p>
 <p>就能够实现同步了，本质就是把存储这部分放在了github上。</p>
 <p>在任何一个设备上，我想要发一个文章的话，只需要配置基本的git和hexo环境，然后按照下面的流程来就可以：</p>
 <h5 id="1-先同步源码"><a href="#1-先同步源码" class="headerlink" title="1.先同步源码"></a>1.先同步源码</h5><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git pull</span><br></code></pre></td></tr></table></figure>
-
 <h5 id="2-新建文章"><a href="#2-新建文章" class="headerlink" title="2.新建文章"></a>2.新建文章</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">hexo <span class="hljs-built_in">new</span> <span class="hljs-built_in">post</span> <span class="hljs-string">&quot;文章标题&quot;</span><br></code></pre></td></tr></table></figure>
-
 <h5 id="3-本地测试"><a href="#3-本地测试" class="headerlink" title="3.本地测试"></a>3.本地测试</h5><figure class="highlight plaintext"><figcaption><span>clean</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs hexo">hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
-
 <p><code>浏览器打开 http://localhost:4000</code></p>
 <h5 id="4-提交到Github仓库"><a href="#4-提交到Github仓库" class="headerlink" title="4.提交到Github仓库"></a>4.提交到Github仓库</h5><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">git <span class="hljs-keyword">add</span> .<br>git commit -m <span class="hljs-string">&quot;Add post: 文章标题&quot;</span><br>git <span class="hljs-keyword">push</span><br></code></pre></td></tr></table></figure>
-
 <h5 id="5-在线发布文章"><a href="#5-在线发布文章" class="headerlink" title="5.在线发布文章"></a>5.在线发布文章</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css">hexo clean<br>hexo <span class="hljs-selector-tag">g</span><br>hexo d<br></code></pre></td></tr></table></figure>
-
-
-
-<p>​	这种方法的缺点也很明显，所有的文章都是开源的，而且在云端存储，长期积累，仓库体积会越来越大，特别是包含图片时。</p>
-<p>​	后续会考虑一些更加合适的方法</p>
+<p>​    这种方法的缺点也很明显，所有的文章都是开源的，而且在云端存储，长期积累，仓库体积会越来越大，特别是包含图片时。</p>
+<p>​    后续会考虑一些更加合适的方法</p>
 
                 
               </div>
@@ -402,8 +394,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/10/%E8%BF%9C%E7%A8%8B%E6%B5%8B%E8%AF%95/" title="教研室测试">
-                        <span class="hidden-mobile">教研室测试</span>
+                      <a href="/2025/10/23/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%A6%82%E5%BF%B5/" title="知识图谱基本概念">
+                        <span class="hidden-mobile">知识图谱基本概念</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -460,6 +452,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -653,6 +651,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
