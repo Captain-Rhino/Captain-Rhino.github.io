@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>Transformer, GPT, BERT的基本结构</title>
+    <link href="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/"/>
+    <url>/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/</url>
+    
+    <content type="html"><![CDATA[<h4 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h4><p><strong>Attention Is All You Need</strong> 该论文2017年6月提交，被NIPS 2017接收，首次提出了Transformer架构，抛弃了CNN和RNN架构，完全采用了注意力机制构建起了整个模型。它使用了自注意力层和多头注意力，搭建了编码器（<strong>encoder</strong>）和解码器（<strong>decoder</strong>）。</p><p>下图是transformer的结构</p><img src="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/transformer.png" class="" title="transformer示意图"><p>注意力机制（<strong>Attention</strong>）源自<strong>Neural Machine Translation by Jointly Learning to Align and Translate</strong>，这篇论文是2014年9月份提交，2015年被ICLR接收的。用于解决机器翻译中RNN的信息瓶颈问题，尤其是解决了RNN的长距离依赖问题，让模型能够在解码时可以回看整个句子。</p><h4 id="GPT"><a href="#GPT" class="headerlink" title="GPT"></a>GPT</h4><p><strong>Improving Language Understanding by Generative Pre-Training</strong> ，这是openai在 2018 年 6 月的一篇论文，首次提出了 GPT模型。GPT 采用 <strong>仅解码器（Decoder-Only）</strong> 的 Transformer 架构，去除了原始 Transformer 中的编码器和交叉注意力，只保留带<strong>因果掩码（Causal Mask）</strong> 的自注意力层和前馈网络。这种设计使得 GPT 成为一个自回归语言模型：在预测下一个词时，只能看到当前位置左侧的文本，保持了因果性。</p><img src="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/gpt.png" class="" title="gpt示意图"><h4 id="BERT"><a href="#BERT" class="headerlink" title="BERT"></a>BERT</h4><p><strong>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</strong> ，这是谷歌在 2018 年 10 月的一篇论文，提出了 BERT（<strong>B</strong>idirectional <strong>E</strong>ncoder <strong>R</strong>epresentations from <strong>T</strong>ransformers）模型。BERT 采用 <strong>仅编码器（Encoder-Only）</strong> 的 Transformer 架构，保留了原始 Transformer 中的编码器部分，并利用<strong>双向自注意力（Bidirectional Self-Attention）</strong> 机制，使每个 token 在编码时能够同时看到其左侧和右侧的上下文，与GPT相比，不具有因果性。</p><img src="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/bert.png" class="" title="BERT示意图"><p>这是BERT和GPT在因果掩码上的区别</p><img src="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/difference.png" class="" title="BERT和GPT的区别">]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Transformer</tag>
+      
+      <tag>大模型</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>最近的一些安排以及技术路线考虑</title>
     <link href="/2026/01/19/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E8%80%83%E8%99%91/"/>
     <url>/2026/01/19/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E8%80%83%E8%99%91/</url>

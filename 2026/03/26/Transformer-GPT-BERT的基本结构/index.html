@@ -19,23 +19,28 @@
   <meta name="author" content="Toss_3">
   <meta name="keywords" content="">
   
-    <meta name="description" content="周内安排上周仔细看了一遍师兄的实验设计，这周要把不懂的地方给学一下，主要包括ResNet，感受野，MLP，知识图谱，知识推理等等相关知识概念，最重要的是要能够复现一下他的实验。 技术路线考虑cs50目前是跳着看的，毕竟不是0基础，后续会在博客上写一些内容。 上周在此之外还给企业导师发了简历，但是并没有得到任何回应，我看了下时间，我现在最想知道的是研二什么时候会回学校，如果恰好一年的话，那也就是9月">
+    <meta name="description" content="TransformerAttention Is All You Need 该论文2017年6月提交，被NIPS 2017接收，首次提出了Transformer架构，抛弃了CNN和RNN架构，完全采用了注意力机制构建起了整个模型。它使用了自注意力层和多头注意力，搭建了编码器（encoder）和解码器（decoder）。 下图是transformer的结构  注意力机制（Attention）源自Neu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最近的一些安排以及技术路线考虑">
-<meta property="og:url" content="http://example.com/2026/01/19/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E8%80%83%E8%99%91/index.html">
+<meta property="og:title" content="Transformer, GPT, BERT的基本结构">
+<meta property="og:url" content="http://example.com/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Toss_3&#39;s Official">
-<meta property="og:description" content="周内安排上周仔细看了一遍师兄的实验设计，这周要把不懂的地方给学一下，主要包括ResNet，感受野，MLP，知识图谱，知识推理等等相关知识概念，最重要的是要能够复现一下他的实验。 技术路线考虑cs50目前是跳着看的，毕竟不是0基础，后续会在博客上写一些内容。 上周在此之外还给企业导师发了简历，但是并没有得到任何回应，我看了下时间，我现在最想知道的是研二什么时候会回学校，如果恰好一年的话，那也就是9月">
+<meta property="og:description" content="TransformerAttention Is All You Need 该论文2017年6月提交，被NIPS 2017接收，首次提出了Transformer架构，抛弃了CNN和RNN架构，完全采用了注意力机制构建起了整个模型。它使用了自注意力层和多头注意力，搭建了编码器（encoder）和解码器（decoder）。 下图是transformer的结构  注意力机制（Attention）源自Neu">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-01-19T07:35:33.000Z">
-<meta property="article:modified_time" content="2026-01-20T12:15:21.412Z">
+<meta property="og:image" content="http://example.com/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/transformer.png">
+<meta property="og:image" content="http://example.com/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/gpt.png">
+<meta property="og:image" content="http://example.com/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/bert.png">
+<meta property="og:image" content="http://example.com/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/difference.png">
+<meta property="article:published_time" content="2026-03-25T16:06:01.000Z">
+<meta property="article:modified_time" content="2026-03-25T16:38:34.450Z">
 <meta property="article:author" content="Toss_3">
-<meta property="article:tag" content="近期计划">
-<meta property="article:tag" content="随想">
+<meta property="article:tag" content="Transformer">
+<meta property="article:tag" content="大模型">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/transformer.png">
   
   
   
-  <title>最近的一些安排以及技术路线考虑 - Toss_3&#39;s Official</title>
+  <title>Transformer, GPT, BERT的基本结构 - Toss_3&#39;s Official</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="最近的一些安排以及技术路线考虑"></span>
+            <span id="subtitle" data-typed-text="Transformer, GPT, BERT的基本结构"></span>
           
         </div>
 
@@ -212,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-01-19 15:35" pubdate>
-          2026年1月19日 下午
+        <time datetime="2026-03-26 00:06" pubdate>
+          2026年3月26日 凌晨
         </time>
       </span>
     
@@ -224,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          378 字
+          900 字
         
       </span>
     
@@ -235,7 +240,7 @@
         
         
         
-          4 分钟
+          8 分钟
         
       </span>
     
@@ -272,16 +277,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">最近的一些安排以及技术路线考虑</h1>
+            <h1 id="seo-header">Transformer, GPT, BERT的基本结构</h1>
             
             
               <div class="markdown-body">
                 
-                <h5 id="周内安排"><a href="#周内安排" class="headerlink" title="周内安排"></a>周内安排</h5><p>上周仔细看了一遍师兄的实验设计，这周要把不懂的地方给学一下，主要包括ResNet，感受野，MLP，知识图谱，知识推理等等相关知识概念，最重要的是要能够<strong>复现</strong>一下他的实验。</p>
-<h5 id="技术路线考虑"><a href="#技术路线考虑" class="headerlink" title="技术路线考虑"></a>技术路线考虑</h5><p><strong>cs50</strong>目前是跳着看的，毕竟不是0基础，后续会在博客上写一些内容。</p>
-<p>上周在此之外还给企业导师发了简历，但是<strong>并没有得到任何回应</strong>，我看了下时间，我现在最想知道的是研二什么时候会回学校，如果恰好一年的话，那也就是9月份直面秋招了，即使是六七月份回学校，给的时间其实也是紧张的。</p>
-<p>我不清楚公司的业务如何，如果有互联网企业的可能，考虑技术积累的话，那么技术积累期也只有这么几个月了，从现在到9月份？</p>
-<p>目前我看好的是<strong>大模型应用开发，以及java后端的一套技术栈</strong>，这段时间先做大模型的RAG开发项目，再学一点java，正好教研室的任务不是很紧急，应该能学一些，到时候可以试着更新一些内容。</p>
+                <h4 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h4><p><strong>Attention Is All You Need</strong> 该论文2017年6月提交，被NIPS 2017接收，首次提出了Transformer架构，抛弃了CNN和RNN架构，完全采用了注意力机制构建起了整个模型。它使用了自注意力层和多头注意力，搭建了编码器（<strong>encoder</strong>）和解码器（<strong>decoder</strong>）。</p>
+<p>下图是transformer的结构</p>
+<img src="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/transformer.png" srcset="/img/loading.gif" lazyload class="" title="transformer示意图">
+<p>注意力机制（<strong>Attention</strong>）源自<strong>Neural Machine Translation by Jointly Learning to Align and Translate</strong>，这篇论文是2014年9月份提交，2015年被ICLR接收的。用于解决机器翻译中RNN的信息瓶颈问题，尤其是解决了RNN的长距离依赖问题，让模型能够在解码时可以回看整个句子。</p>
+<h4 id="GPT"><a href="#GPT" class="headerlink" title="GPT"></a>GPT</h4><p><strong>Improving Language Understanding by Generative Pre-Training</strong> ，这是openai在 2018 年 6 月的一篇论文，首次提出了 GPT模型。GPT 采用 <strong>仅解码器（Decoder-Only）</strong> 的 Transformer 架构，去除了原始 Transformer 中的编码器和交叉注意力，只保留带<strong>因果掩码（Causal Mask）</strong> 的自注意力层和前馈网络。这种设计使得 GPT 成为一个自回归语言模型：在预测下一个词时，只能看到当前位置左侧的文本，保持了因果性。</p>
+<img src="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/gpt.png" srcset="/img/loading.gif" lazyload class="" title="gpt示意图">
+<h4 id="BERT"><a href="#BERT" class="headerlink" title="BERT"></a>BERT</h4><p><strong>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</strong> ，这是谷歌在 2018 年 10 月的一篇论文，提出了 BERT（<strong>B</strong>idirectional <strong>E</strong>ncoder <strong>R</strong>epresentations from <strong>T</strong>ransformers）模型。BERT 采用 <strong>仅编码器（Encoder-Only）</strong> 的 Transformer 架构，保留了原始 Transformer 中的编码器部分，并利用<strong>双向自注意力（Bidirectional Self-Attention）</strong> 机制，使每个 token 在编码时能够同时看到其左侧和右侧的上下文，与GPT相比，不具有因果性。</p>
+<img src="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/bert.png" srcset="/img/loading.gif" lazyload class="" title="BERT示意图">
+<p>这是BERT和GPT在因果掩码上的区别</p>
+<img src="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/difference.png" srcset="/img/loading.gif" lazyload class="" title="BERT和GPT的区别">
 
                 
               </div>
@@ -290,34 +300,13 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%97%B2%E6%80%9D/" class="category-chain-item">闲思</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="print-no-link">#随想</a>
+        <a href="/tags/Transformer/" class="print-no-link">#Transformer</a>
       
-        <a href="/tags/%E8%BF%91%E6%9C%9F%E8%AE%A1%E5%88%92/" class="print-no-link">#近期计划</a>
+        <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" class="print-no-link">#大模型</a>
       
     </div>
   
@@ -329,8 +318,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>最近的一些安排以及技术路线考虑</div>
-      <div>http://example.com/2026/01/19/最近的一些安排以及技术路线考虑/</div>
+      <div>Transformer, GPT, BERT的基本结构</div>
+      <div>http://example.com/2026/03/26/Transformer-GPT-BERT的基本结构/</div>
     </div>
     <div class="license-meta">
       
@@ -342,7 +331,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年1月19日</div>
+          <div>2026年3月26日</div>
         </div>
       
       
@@ -374,18 +363,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/03/26/Transformer-GPT-BERT%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/" title="Transformer, GPT, BERT的基本结构">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Transformer, GPT, BERT的基本结构</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/01/16/%E5%9F%BA%E4%BA%8ERAG%E6%8A%80%E6%9C%AF%E7%9A%84%E7%BE%A4%E8%81%8A%E5%9B%9E%E7%AD%94%E7%BD%91%E7%AB%99or%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E6%9E%84%E6%83%B3/" title="基于RAG技术的群聊回答网站or机器人的构想">
-                        <span class="hidden-mobile">基于RAG技术的群聊回答网站or机器人的构想</span>
+                      <a href="/2026/01/19/%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E8%80%83%E8%99%91/" title="最近的一些安排以及技术路线考虑">
+                        <span class="hidden-mobile">最近的一些安排以及技术路线考虑</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
